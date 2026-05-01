@@ -36,6 +36,7 @@ build/
 # Project Files (optional)
 # =====================
 resources.py
+library.py
 
 # =====================
 # Generated Outputs
