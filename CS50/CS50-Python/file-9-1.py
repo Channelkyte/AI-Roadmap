@@ -15,7 +15,7 @@ def yell(words):
     print(*uppercased)
 
 if __name__ == "__main__":
-    main()
+    main() 
 
 # LIST COMPREHENSION
 pirates = [
