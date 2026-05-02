@@ -9,7 +9,7 @@ class Pirate:
         self.first = first
         self.last = last
 
-    # ✅ Getter
+    # Getter
     @property
     def fullname(self):
         return f"{self.first} {self.last}"
@@ -18,14 +18,14 @@ class Pirate:
     def bounty_poster(self):
         return f"{self.first.lower()}.{self.last.lower()}@pirate.com"
 
-    # ✅ Setter
+    # Setter
     @fullname.setter
     def fullname(self, name):
         first, last = name.split(" ")
         self.first = first
         self.last = last
 
-    # ✅ Deleter
+    # Deleter
     @fullname.deleter
     def fullname(self):
         print("Identity removed! ☠️")
