@@ -27,28 +27,28 @@ print(emp_2.pay)
 
 
 # =========================================
-# 📘 CLASSES AND INSTANCES — COMMENT NOTES
+#  CLASSES AND INSTANCES — COMMENT NOTES
 # =========================================
 
-# 🧠 CLASS
+#  CLASS
 # A class is a blueprint/template for creating objects.
 
-# 👤 INSTANCE
+#  INSTANCE
 # An instance is an actual object created from a class.
 
-# ⚙️ __init__ (CONSTRUCTOR)
+#  __init__ (CONSTRUCTOR)
 # Automatically runs when creating an object.
 # Used to initialize attributes.
 
-# 🧾 ATTRIBUTES
+#  ATTRIBUTES
 # Variables inside a class (data of the object).
 # Example: first, last, pay, email
 
-# 🧩 METHODS
+#  METHODS
 # Functions inside a class (behavior of the object).
 # Example: fullname(), apply_raise()
 
-# 🔑 self
+#  self
 # Refers to the current instance of the class.
 #
 # =========================================

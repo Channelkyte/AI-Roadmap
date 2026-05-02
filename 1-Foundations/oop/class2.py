@@ -34,19 +34,7 @@ emp_2.apply_raise(0.10)
 print(emp_2.pay)
 
 # =========================================
-# 📘 LESSON 2: CLASS VARIABLES — NOTES
-# =========================================
-
-# 🧠 CLASS VARIABLES
-# Class variables are variables shared by ALL instances of a class.
-# Defined inside the class but outside any method.
-
-# Example:
-# numOfEmps → tracks total number of employees
-# raise_amount → shared default raise multiplier
-
-# =========================================
-# 🔑 DIFFERENCE: CLASS vs INSTANCE VARIABLES
+#  LESSON 2: CLASS VARIABLES — NOTES
 # =========================================
 
 # Instance Variables:
@@ -60,7 +48,7 @@ print(emp_2.pay)
 # Example: numOfEmps, raise_amount
 
 # =========================================
-# 📌 ACCESSING CLASS VARIABLES
+#  ACCESSING CLASS VARIABLES
 # =========================================
 
 # Access via class (recommended)
@@ -70,21 +58,10 @@ print(emp_2.pay)
 # emp_1.numOfEmps
 
 # =========================================
-# 🔁 MODIFYING CLASS VARIABLES
+#  MODIFYING CLASS VARIABLES
 # =========================================
-
+#
 # Modify using class:
 # Employee.raise_amount = 1.05
-
-# ⚠️ If you do:
-# emp_1.raise_amount = 1.10
-# → This creates an INSTANCE variable (does NOT change the class variable)
-
-# =========================================
-# 📊 TRACKING OBJECTS
-# =========================================
-
-# numOfEmps increments every time a new object is created:
-# Employee.numOfEmps += 1
 #
 # =========================================
