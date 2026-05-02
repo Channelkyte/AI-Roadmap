@@ -1,5 +1,4 @@
 # 🤖 AI Engineering Roadmap
-### Carl Joshua M. Coloma — Computer Science, Software Engineering Track
 
 <p align="center">
   <img src="image1.JPG" width="600"/><br><br>
