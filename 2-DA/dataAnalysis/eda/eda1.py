@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt 
 import seaborn as sns
 
+#eda example
+
 data = {
     "Name": ["Carl","Anna","John","Mike","Sara","Lily","Tom"],
     "Age": [23,21,25,22,24,22,23],
