@@ -1,110 +1,28 @@
-# Phase 5: Natural Language Processing (NLP) 🤖📚
-
-This repository contains essential Natural Language Processing (NLP) foundations using Python.  
-It covers text preprocessing, classical NLP, deep learning models, transformers, and modern NLP applications.
+# Phase 4 · NLP Fundamentals
 
 ---
 
-## 1. Introduction to Natural Language Processing 🧠
+## What You'll Learn
 
-- Natural Language Processing (NLP) is a field of AI that enables machines to understand, interpret, and generate human language.
-- It combines **machine learning, deep learning, and linguistics**.
-- **Key Components**:
-  - Corpus: collection of text data
-  - Tokens: individual words or subwords
-  - Vocabulary: set of unique tokens
-  - Embeddings: numerical representation of words
-  - Model: algorithm that processes language
-  - Evaluation: measuring language model performance
+- **Tokenization** — LLMs read tokens, not words. Understand byte-pair encoding (BPE) and why it matters for context windows and cost.
+- **Word Embeddings** — words as vectors, semantic similarity, Word2Vec intuition. This is the foundation of how models understand meaning.
+- **TF-IDF** — implement it from scratch using Python and NumPy. Then understand why embeddings replaced it.
+- **HuggingFace NLP Tasks** — run NER, summarization, sentiment, and question-answering using `pipeline()`. Know which model architecture fits which task.
+- **Fine-tuning BERT** — use `Trainer` API to fine-tune `bert-base-uncased` on a classification task. Understand what fine-tuning actually changes in the model.
+- **Encoder vs Decoder** — know the difference cold. BERT = encoder (understanding). GPT = decoder (generation). This question comes up in every AI interview.
+- **HuggingFace Hub** — push your fine-tuned model to the Hub. Real engineers publish their work.
 
 ---
 
-## 2. Text Preprocessing 🧹
+## Resources
 
-- Raw text must be cleaned and standardized before modeling.
-- **Common Steps**:
-  - Lowercasing text
-  - Removing punctuation and special characters
-  - Tokenization (splitting text into words/sentences)
-  - Stopword removal
-  - Stemming and Lemmatization
-- **Goal**: convert raw text into structured and clean input for models
-
----
-
-## 3. Text Representation 🔢
-
-- Machines cannot understand raw text directly, so text must be converted into numbers.
-- **Methods**:
-  - Bag of Words (BoW): counts word frequency
-  - TF-IDF: weights words based on importance
-  - Word Embeddings: dense vector representation of words
-- **Goal**: capture meaning and relationships between words
+| Resource | What You Get | Format | Cost |
+|----------|-------------|--------|------|
+| HuggingFace NLP Course (huggingface.co/learn) | The definitive NLP + Transformers course. Chapters 1–4 are required. | Interactive | Free |
+| Jay Alammar — "The Illustrated Word2Vec" | Best visual explanation of embeddings on the internet. | Blog | Free |
+| Jay Alammar — "The Illustrated BERT" | Understand BERT architecturally before fine-tuning it. | Blog | Free |
+| Andrej Karpathy — "Let's build the GPT tokenizer" (YouTube) | 2-hour deep dive on tokenization. Watch it once, seriously. | Video | Free |
+| HuggingFace Trainer docs | Official reference for fine-tuning. Bookmark it. | Docs | Free |
+| Weights & Biases + HuggingFace integration | One-line W&B integration with Trainer. Always use it. | Docs | Free |
 
 ---
-
-## 4. Classical NLP Models 📊
-
-- Traditional machine learning approaches applied to text data.
-- **Examples**:
-  - Naive Bayes
-  - Logistic Regression
-  - Support Vector Machines (SVM)
-- **Applications**:
-  - Spam detection
-  - Sentiment analysis
-  - Text classification
-
----
-
-## 5. Sequence Models 🔁
-
-- Deep learning models designed for sequential data like text.
-- **Types**:
-  - Recurrent Neural Networks (RNN)
-  - Long Short-Term Memory (LSTM)
-- **Key Idea**: understand context and order of words in a sentence
-- **Applications**:
-  - Sentiment analysis
-  - Language modeling
-  - Text generation
-
----
-
-## 6. Transformers & Attention ⚡
-
-- Modern architecture that powers models like BERT and GPT.
-- **Key Concepts**:
-  - Self-attention mechanism
-  - Multi-head attentione
-- **Why it matters**:
-  - Handles long-range dependencies better than RNNs
-  - Foundation of modern LLMs
-
----
-
-## 7. Pretrained Models 🤖
-
-- Use existing large-scale models trained on massive datasets.
-- **Examples**:
-  - BERT
-  - GPT
-  - Hugging Face Transformers
-- **Benefits**:
-  - Faster development
-  - High accuracy with minimal training data
-
----
-
-## 8. NLP Evaluation 📈
-
-- Metrics used to measure NLP model performance.
-- **Common Metrics**:
-  - Accuracy
-  - Precision, Recall, F1-score
-  - Confusion Matrix
-- **Goal**: evaluate how well the model understands language tasks
-
----
-
-## End of Phase 5 NLP Notes

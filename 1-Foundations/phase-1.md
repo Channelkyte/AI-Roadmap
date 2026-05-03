@@ -25,8 +25,3 @@
 | SQLite Tutorial (sqlitetutorial.net) | Fast SQL reference. Learn the 80% you actually use in 3 days. | Website | Free |
 
 ---
-
-## Tips
-- Finish CS50P first, then use Real Python to fill gaps. Do not start a new course.
-- The SQL mini-module is **3 days — no more, no less.**
-- Push every small project to GitHub. Start building your profile now.

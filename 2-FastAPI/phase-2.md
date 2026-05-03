@@ -28,8 +28,3 @@
 | slowapi (GitHub) | Rate limiting for FastAPI. One decorator, done. | Docs | Free |
 
 ---
-
-## Tips
-- ArjanCodes is worth watching early — his patterns are closer to what you'll see in real AI codebases.
-- Don't just make things work; make them **clean**.
-- This API will be reused and extended in Phases 3 through 8. Build it right.

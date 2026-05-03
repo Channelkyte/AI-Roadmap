@@ -1,83 +1,31 @@
-# Phase 4: Machine Learning - Python Notes 🤖
-
-This repository contains essential Machine Learning foundations using Python.  
-It covers Supervised and Unsupervised Learning, Deep Learning, and key ML concepts.
+# Phase 3 · Machine Learning + Experiment Tracking
 
 ---
 
-## 1. Introduction to Machine Learning 🧠
+## What You'll Learn
 
-- Machine Learning (ML) is a subset of AI that allows systems to learn patterns from data and make predictions or decisions.
-- **Key Components**:  
-  - Dataset: training and testing data  
-  - Features: input variables  
-  - Labels/Targets: output variables (for supervised learning)  
-  - Model: algorithm that learns patterns  
-  - Training: process of fitting model to data  
-  - Evaluation: measure model performance using metrics
-
----
-
-## 2. Supervised Learning 📊
-
-- Involves training a model on labeled data (input-output pairs).
-- **Goal**: predict output for new inputs.
-- **Types**:  
-  1. Regression: predicts continuous values  
-     - Examples: Linear Regression, Ridge Regression, Lasso Regression  
-     - Metrics: Mean Squared Error (MSE), Mean Absolute Error (MAE), R² Score  
-  2. Classification: predicts discrete labels  
-     - Examples: Logistic Regression, Decision Trees, Random Forest, K-Nearest Neighbors (KNN), Naive Bayes, SVM  
-     - Metrics: Accuracy, Precision, Recall, F1 Score, ROC-AUC
-- **Steps**:  
-  1. Split dataset into train and test sets  
-  2. Choose model and train on training data  
-  3. Predict on test data  
-  4. Evaluate using performance metrics  
-  5. Tune hyperparameters for better performance
+- **NumPy** — arrays, broadcasting, vectorized operations. Stop using Python loops for math.
+- **Pandas** — load CSVs, clean data, filter rows, group and aggregate. The bread and butter of every ML pipeline.
+- **scikit-learn** — preprocessing, pipelines, cross-validation, classification/regression, evaluation metrics (accuracy, F1, AUC).
+- **PyTorch** — tensors, `nn.Module`, training loop (`forward`, `loss`, `backward`, `optimizer.step()`). Know this loop by heart.
+- **Hugging Face `pipeline()`** — run pre-trained models in 3 lines. Understand what's happening under the hood.
+- **Weights & Biases** — log metrics, compare runs, visualize results. Never train blind again.
+- **Gradio** — wrap a model in a UI demo in under 10 lines.
+- **Model Evaluation** — don't just check accuracy. Use confusion matrix, precision, recall, F1.
 
 ---
 
-## 3. Unsupervised Learning 🔍
+## Resources
 
-- Training on data without labels.
-- **Goal**: find patterns, groupings, or structure in the data.
-- **Types**:  
-  1. Clustering: group similar data points  
-     - Examples: K-Means, Hierarchical Clustering, DBSCAN  
-     - Evaluation: silhouette score, Davies-Bouldin index  
-  2. Dimensionality Reduction: reduce feature space  
-     - Examples: PCA, t-SNE, UMAP  
-     - Applications: data visualization, noise reduction, feature extraction
-- **Applications**:  
-  - Customer segmentation  
-  - Market basket analysis  
-  - Anomaly detection
+| Resource | What You Get | Format | Cost |
+|----------|-------------|--------|------|
+| Kaggle — Pandas course | Best Pandas intro — hands-on, short, practical. | Interactive | Free |
+| NumPy official quickstart | Fast and dense. Work through all the examples. | Docs | Free |
+| fast.ai — Practical Deep Learning | Best practical ML course. Project-first, no fluff. | Video + Notebooks | Free |
+| PyTorch official tutorials | Learn from the source — tensors through training loops. | Docs + Code | Free |
+| Sentdex — PyTorch playlist (YouTube) | Beginner-friendly, builds up incrementally. | Video | Free |
+| Weights & Biases quickstart | Set up W&B in 5 minutes. Always do this first. | Docs | Free |
+| Gradio docs (gradio.app) | Build an ML demo UI in minutes. Read the quickstart only. | Docs | Free |
+| Hugging Face — Pipeline tutorial | How to run pre-trained models with one function call. | Docs | Free |
 
 ---
-
-## 4. Deep Learning 🧠
-
-- Subset of ML using neural networks with multiple layers.
-- **Core Concepts**:  
-  - Neural Network: layers of neurons connected with weights  
-  - Activation functions: ReLU, Sigmoid, Tanh, Softmax  
-  - Loss functions: MSE, Cross-Entropy  
-  - Optimization: Gradient Descent, Adam  
-  - Backpropagation: update weights using gradients
-- **Types of Neural Networks**:  
-  - Feedforward Neural Network (FNN)  
-  - Convolutional Neural Network (CNN) – for images  
-  - Recurrent Neural Network (RNN) – for sequences/time series  
-  - Long Short-Term Memory (LSTM) – improved RNN for long dependencies
-- **Frameworks**: TensorFlow, Keras, PyTorch
-- **Applications**:  
-  - Image recognition  
-  - Natural Language Processing (NLP)  
-  - Speech recognition  
-  - Recommendation systems
-
----
-
-# End of Phase-4 Machine Learning Notes
-
