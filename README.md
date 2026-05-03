@@ -1,14 +1,5 @@
 # 🤖 AI Engineering Roadmap
 
-<p align="center">
-  <img src="image1.JPG" width="600"/><br><br>
-  <img src="image2.JPG" width="600"/><br>
-  <em>AI Engineering Roadmap Overview</em>
-</p>
-
----
-
-> *"The fastest way to learn is to build something you actually care about."*
 
 This repository documents my structured, project-driven journey toward becoming a **Junior AI Engineer** — from Python foundations all the way to deploying production RAG systems and AI agents.
 
@@ -35,25 +26,6 @@ RAG + LangChain + LangGraph + Agents
         ↓
 Deploy + CI/CD + Portfolio
 ```
-
-**9 phases · ~37 weeks · Almost entirely free resources · Every phase ships a project**
-
----
-
-## 🚀 Projects
-
-| Project | Phase | Stack | Status |
-|---------|-------|-------|--------|
-| TextCleaner | Phase 1 | Python, OOP, File I/O | ⏳ Upcoming |
-| FastAPI Text Processing API | Phase 2 | FastAPI, JWT, Pydantic, slowapi | ⏳ Upcoming |
-| PH News Sentiment Classifier | Phase 3 | PyTorch, scikit-learn, W&B, Gradio | ⏳ Upcoming |
-| Fine-tuned BERT on Local Dataset | Phase 4 | HuggingFace Trainer, W&B | ⏳ Upcoming |
-| Transformer Explainer (Blog/README) | Phase 5 | Writing, Architecture Diagrams | ⏳ Upcoming |
-| FastAPI Chatbot with Observability | Phase 6 | FastAPI, Anthropic API, LangSmith | ⏳ Upcoming |
-| RAG Chatbot over PH Documents | Phase 7 | LangChain, LangGraph, ChromaDB, FastAPI, RAGAS | ⏳ Upcoming |
-| Capstone — Live RAG App + CI/CD | Phase 8 | Docker, GitHub Actions, Render | ⏳ Upcoming |
-
-> As each project is completed, this table will be updated with live demo links and GitHub links.
 
 ---
 
@@ -85,8 +57,6 @@ Deploy + CI/CD + Portfolio
 - Modules and packages: `__init__.py`, importing your own code
 - SQL basics: `SELECT`, `WHERE`, `JOIN`, `GROUP BY` using SQLite *(3-day module)*
 
-**Milestone project:** `TextCleaner` — OOP + string processing + file I/O
-
 ---
 
 ### 🟦 Phase 2 — FastAPI + Security Basics
@@ -100,8 +70,6 @@ Deploy + CI/CD + Portfolio
 - **JWT authentication** — protect endpoints with `python-jose` + `passlib`
 - **Rate limiting** — `slowapi`, 10 requests/minute per user
 - Environment variables: `Pydantic Settings` + `.env` files
-
-**Milestone project:** FastAPI text processing API with JWT auth + rate limiting
 
 ---
 
@@ -118,8 +86,6 @@ Deploy + CI/CD + Portfolio
 - **W&B experiment tracking** — log accuracy, loss, hyperparameters from day 1
 - Gradio: wrap model in a demo UI, publish to HuggingFace Spaces
 
-**Milestone project:** Philippine news sentiment classifier with W&B tracking + Gradio demo
-
 ---
 
 ### 🟣 Phase 4 — NLP Fundamentals
@@ -131,8 +97,6 @@ Deploy + CI/CD + Portfolio
 - NLP tasks: sentiment analysis, NER, summarization via HuggingFace
 - Fine-tuning: HuggingFace `Trainer` on a custom dataset
 - Encoder (BERT) vs decoder (GPT) — conceptual understanding before Phase 5
-
-**Milestone project:** Fine-tune BERT on a local Filipino/Philippine dataset
 
 ---
 
@@ -148,8 +112,6 @@ Deploy + CI/CD + Portfolio
 - Encoder-only (BERT) vs decoder-only (GPT)
 - Read *Attention Is All You Need* — abstract + architecture section minimum
 
-**Milestone project:** Write a detailed README/blog post explaining transformers in your own words, with a diagram you drew yourself
-
 ---
 
 ### 🔴 Phase 6 — LLMs + Prompt Engineering + Observability
@@ -164,8 +126,6 @@ Deploy + CI/CD + Portfolio
 - **Prompt injection** — understand the attack, implement input sanitization
 - Ollama: run models locally (llama3, mistral) — reduce API costs while learning
 - Serve chatbot as a proper async FastAPI endpoint with JWT auth
-
-**Milestone project:** FastAPI chatbot with memory, streaming, observability, and structured output
 
 ---
 
@@ -185,8 +145,6 @@ Deploy + CI/CD + Portfolio
 - **Redis cache**: cache embeddings to reduce API calls and latency
 - **RAGAS evaluation**: measure faithfulness, answer relevancy, context precision
 
-**Milestone project:** RAG chatbot over Philippine documents — LangChain + LangGraph + FastAPI + JWT + LangSmith + RAGAS eval report
-
 ---
 
 ### 🟤 Phase 8 — Deploy + CI/CD + Portfolio
@@ -200,8 +158,6 @@ Deploy + CI/CD + Portfolio
 - HuggingFace Spaces: publish live AI demos
 - Kaggle: at least one public competition submission
 
-**Milestone project:** Capstone — live RAG chatbot with CI/CD pipeline + HuggingFace Space demo
-
 ---
 
 ### 🔘 Phase 9 — System Design for AI *(Optional)*
@@ -214,8 +170,6 @@ Deploy + CI/CD + Portfolio
 - Caching strategies: what to cache, for how long, when to invalidate
 - Redis-based rate limiting at scale
 - Database design for AI apps: conversation history, embeddings, eval results
-
-**Milestone project:** Architecture diagram — RAG chatbot handling 1,000 concurrent users
 
 ---
 
