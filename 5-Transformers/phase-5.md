@@ -1,8 +1,4 @@
 # Phase 5 · Transformers — How They Actually Work
-> **~3 weeks | Month 5**
-
-## Mentor Note
-Do not skip this phase. Most junior AI engineers can use transformers. Very few can explain them. The ones who can explain them — clearly, without notes — are the ones who get hired and trusted with real systems. Your explainer also becomes a permanent portfolio piece that shows depth. Three weeks of focused study will separate you from 80% of other candidates.
 
 ---
 
@@ -18,20 +14,6 @@ Do not skip this phase. Most junior AI engineers can use transformers. Very few 
 
 ---
 
-## 📦 Project — Transformer Explainer (Blog Post or README)
-
-**The deliverable is your own explanation — not running code**
-
-Write a detailed blog post or GitHub README that explains how transformers work in your own words:
-- Use diagrams you drew yourself (even hand-drawn and photographed is fine)
-- Explain attention, multi-head attention, positional encoding, and the transformer block
-- Compare encoder-only vs decoder-only with real model examples
-- No copy-pasting from articles. Every sentence should be yours.
-
-Publish it: GitHub README, Notion page, LinkedIn article, or personal blog. Link it in your portfolio. Most junior engineers cannot do this — it is a direct signal of depth.
-
----
-
 ## Resources
 
 | Resource | What You Get | Format | Cost |
@@ -43,8 +25,3 @@ Publish it: GitHub README, Notion page, LinkedIn article, or personal blog. Link
 | "Attention Is All You Need" (original paper) | Read the abstract, introduction, and architecture section. Not the full paper — yet. | Paper | Free |
 
 ---
-
-## Tips
-- Watch Karpathy's video with a notebook open. Pause and type every line yourself. Passive watching won't cut it.
-- 3Blue1Brown first → Jay Alammar second → Karpathy third. That order builds intuition before implementation.
-- Your explainer post is more valuable than another code project at this stage. Write it with care.

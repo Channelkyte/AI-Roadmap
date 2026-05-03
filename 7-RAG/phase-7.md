@@ -1,8 +1,4 @@
 # Phase 7 · RAG + LangChain + Agents
-> **~5 weeks | Month 6–7 | Most Employable Skill Right Now**
-
-## Mentor Note
-This is what companies are actively building and hiring for right now. If you can ship a working RAG system with evaluation metrics, you are ahead of most self-taught AI engineers applying for the same roles. LangGraph has replaced basic LangChain agents as the production standard — learn both, but prioritize LangGraph for anything stateful. Your Phase 7 project is your portfolio centerpiece. Treat it like a real product.
 
 ---
 
@@ -21,23 +17,6 @@ This is what companies are actively building and hiring for right now. If you ca
 
 ---
 
-## 📦 Project — RAG Chatbot over Philippine Documents
-
-**LangChain + ChromaDB + LangGraph + FastAPI + LangSmith + RAGAS**
-
-This is your portfolio centerpiece. Build it like a real product:
-
-1. **Ingest** real documents — university syllabi, PH laws, government issuances, technical docs, anything locally relevant
-2. **Chunk and embed** documents into **ChromaDB** with Redis caching for embeddings
-3. **Build the RAG pipeline** — retrieve top-K relevant chunks, inject into LLM context, generate grounded answers
-4. **Add conversational memory** using LangGraph so follow-up questions work naturally
-5. **Wrap in FastAPI** — `POST /chat`, `POST /ingest`, `GET /health` — with JWT auth and rate limiting
-6. **Trace everything** in LangSmith — retrieval steps, LLM calls, latency, token usage
-7. **Evaluate with RAGAS** — run an evaluation set and include the report in your README
-8. **Push to GitHub** with an architecture diagram, live demo link (added in Phase 8), and your RAGAS results
-
----
-
 ## Resources
 
 | Resource | What You Get | Format | Cost |
@@ -51,9 +30,3 @@ This is your portfolio centerpiece. Build it like a real product:
 | Redis docs — caching basics | Understand how to cache embeddings. Don't re-embed on every run. | Docs | Free |
 
 ---
-
-## Tips
-- Pick documents that are genuinely useful and locally relevant. A RAG chatbot over Philippine laws or university policies is far more interesting to a hiring manager than one over a generic Wikipedia dump.
-- Start without LangGraph first — get a working RAG pipeline with basic LangChain, then refactor to LangGraph for stateful conversation. Don't learn both at once.
-- Your RAGAS evaluation report should be in the README. Numbers show you understand quality, not just functionality.
-- This project will be deployed in Phase 8. Build it clean from the start.
