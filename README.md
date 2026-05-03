@@ -33,15 +33,15 @@ Deploy + CI/CD + Portfolio
 
 | Phase | Topic | Status |
 |-------|-------|--------|
-| 1 | Python Foundations + SQL | 🔄 In Progress |
-| 2 | FastAPI + Security Basics | ⏳ Upcoming |
-| 3 | Machine Learning + W&B Tracking | ⏳ Upcoming |
-| 4 | NLP Fundamentals | ⏳ Upcoming |
-| 5 | Transformers — Architecture | ⏳ Upcoming |
-| 6 | LLMs + Prompt Engineering + Observability | ⏳ Upcoming |
-| 7 | RAG + LangChain + LangGraph + Agents | ⏳ Upcoming |
-| 8 | Deploy + CI/CD + Portfolio | ⏳ Upcoming |
-| 9 | System Design for AI *(optional)* | ⏳ Upcoming |
+| 1 | Python Foundations + SQL | In Progress |
+| 2 | FastAPI + Security Basics | Upcoming |
+| 3 | Machine Learning + W&B Tracking | Upcoming |
+| 4 | NLP Fundamentals | Upcoming |
+| 5 | Transformers — Architecture | Upcoming |
+| 6 | LLMs + Prompt Engineering + Observability | Upcoming |
+| 7 | RAG + LangChain + LangGraph + Agents | Upcoming |
+| 8 | Deploy + CI/CD + Portfolio | Upcoming |
+| 9 | System Design for AI *(optional)* | Upcoming |
 
 ---
 
