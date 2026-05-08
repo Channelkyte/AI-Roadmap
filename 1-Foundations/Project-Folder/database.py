@@ -8,35 +8,44 @@ load_dotenv()
 # CONNECTION
 # =========================
 def get_connection():
-    return mysql.connector.connect(
-        host=os.getenv("DB_HOST"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD"),
-        database=os.getenv("DB_NAME"),
-        autocommit=False
-    )
-
+    try: 
+        return mysql.connector.connect(
+            host=os.getenv("DB_HOST"),
+            user=os.getenv("DB_USER"),
+            password=os.getenv("DB_PASSWORD"),
+            database=os.getenv("DB_NAME"),
+            autocommit=False
+        )
+    except mysql.connector.Error as e:
+        print("Database connection failed: ", e)
+        return None
 
 def execute(query, params=None, fetch=False, many=False):
     db = get_connection()
+
+    if db is None:
+        return None
+
     cursor = db.cursor(dictionary=True)
 
-    if many:
-        cursor.executemany(query, params)
-    else:
-        cursor.execute(query, params or None)
+    try:
+        if many:
+            cursor.executemany(query, params)
+        else:
+            cursor.execute(query, params or None)
 
-    result = None
+        result = cursor.fetchall() if fetch else None
 
-    if fetch:
-        result = cursor.fetchall()
+        db.commit()
+        return result
 
-    db.commit()
-    cursor.close()
-    db.close()
+    except Exception as e:
+        db.rollback()
+        print("SQL Error:", e)
 
-    return result
-
+    finally:
+        cursor.close()
+        db.close()
 
 # =========================
 # CREATE TABLES
