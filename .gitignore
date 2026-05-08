@@ -33,12 +33,6 @@ build/
 *.spec
 
 # =====================
-# Project Files (optional)
-# =====================
-resources.py
-library.py
-
-# =====================
 # Generated Outputs
 # =====================
 outputs/
