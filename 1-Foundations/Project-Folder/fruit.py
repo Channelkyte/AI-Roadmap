@@ -16,12 +16,6 @@ class DevilFruit:
         self.text = text
         self.tokens = []
 
-    def __repr__(self):
-        return f"DevilFruit(tokens={len(self.tokens)}, chars={len(self.text)})"
-
-    def __len__(self):
-        return len(self.text)
-
     def lowercase(self):
         self.text = self.text.lower()
         return self
@@ -40,52 +34,12 @@ class DevilFruit:
 
     def remove_stopwords(self):
         words = self.text.split()
-        words = [w for w in words if w not in self.STOPWORDS]
-        self.text = " ".join(words)
+        self.text = " ".join([w for w in words if w not in self.STOPWORDS])
         return self
 
     def tokenize(self):
         self.tokens = self.text.split()
-        return self.tokens   # FIXED (was wrong before)
-
-    def most_common(self, n=5):
-        return Counter(self.tokens).most_common(n)
-
-    def get_summary(self):
-
-        if not self.tokens:
-            self.tokenize()
-
-        word_lengths = [len(w) for w in self.tokens]
-
-        return {
-            "word_count": len(self.tokens),
-            "char_count": len(self.text),
-            "unique_words": len(set(self.tokens)),
-            "avg_word_length": round(sum(word_lengths) / len(word_lengths), 2) if word_lengths else 0,
-            "top_words": self.most_common(5)
-        }
-
-    def detect_language(self):
-
-        try:
-            url = "https://libretranslate.de/detect"
-            response = requests.post(url, data={"q": self.text}, timeout=5)
-
-            if response.status_code == 200:
-                data = response.json()
-                if data:
-                    lang = data[0]["language"]
-                    confidence = round(data[0]["confidence"] * 100, 2)
-                    return lang, confidence
-
-            raise Exception()
-
-        except Exception:
-            try:
-                return detect(self.text), 100
-            except Exception:
-                return "unknown", 0
+        return self.tokens
 
     def clean_all(self):
         self.lowercase()
@@ -96,7 +50,24 @@ class DevilFruit:
         self.tokenize()
         return self
 
-    def reset(self):
-        self.text = self.original_text
-        self.tokens = []
-        return self
+    def get_summary(self):
+        if not self.tokens:
+            self.tokenize()
+
+        word_lengths = [len(w) for w in self.tokens]
+
+        return {
+            "word_count": len(self.tokens),
+            "unique_words": len(set(self.tokens)),
+            "avg_word_length": round(sum(word_lengths) / len(word_lengths), 2) if word_lengths else 0,
+            "top_words": Counter(self.tokens).most_common(5)
+        }
+
+    def detect_language(self):
+        try:
+            return detect(self.text), 100
+        except:
+            return "unknown", 0
+
+    def __repr__(self):
+        return f"DevilFruit(tokens={len(self.tokens)}, chars={len(self.text)})"
