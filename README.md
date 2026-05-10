@@ -10,6 +10,7 @@ RAG systems and AI agents.
 
 ## The Path
 
+```
 ai-engineer/
 │
 ├── 01 · Python Foundations + SQL
@@ -50,6 +51,7 @@ ai-engineer/
 └── 09 · System Design for AI *(optional)*
       ├── Celery + Redis
       └── Scaling + Caching
+```
 
 ---
 
