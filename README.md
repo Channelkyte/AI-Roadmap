@@ -1,31 +1,55 @@
 # 🤖 AI Engineering Roadmap
 
+This repository documents my structured, project-driven journey toward becoming a
+**Junior AI Engineer** — from Python foundations all the way to deploying production
+RAG systems and AI agents.
 
-This repository documents my structured, project-driven journey toward becoming a **Junior AI Engineer** — from Python foundations all the way to deploying production RAG systems and AI agents.
-
-**Not a collection of tutorials. A record of things actually built.**
+**From Zero to AI Engineer — one built project at a time.**
 
 ---
 
 ## The Path
 
-```
-Python Foundations + SQL
-        ↓
-FastAPI + Auth + Security
-        ↓
-Machine Learning + Experiment Tracking (W&B)
-        ↓
-NLP Fundamentals
-        ↓
-Transformers — How They Actually Work
-        ↓
-LLMs + Prompt Engineering + Observability
-        ↓
-RAG + LangChain + LangGraph + Agents
-        ↓
-Deploy + CI/CD + Portfolio
-```
+ai-engineer/
+│
+├── 01 · Python Foundations + SQL
+│     ├── OOP + Exceptions
+│     ├── File I/O + APIs
+│     └── SQL + SQLite
+│
+├── 02 · FastAPI + Auth + Security
+│     ├── Routes + Pydantic
+│     ├── JWT Auth
+│     └── Rate Limiting
+│
+├── 03 · Machine Learning + W&B
+│     ├── scikit-learn + PyTorch
+│     └── Experiment Tracking
+│
+├── 04 · NLP Fundamentals
+│     ├── Tokenization + Embeddings
+│     └── Fine-tuning
+│
+├── 05 · Transformers — How They Actually Work
+│     ├── Attention Mechanism
+│     └── BERT vs GPT
+│
+├── 06 · LLMs + Prompt Engineering + Observability
+│     ├── Prompting Techniques
+│     └── LangSmith + Langfuse
+│
+├── 07 · RAG + LangChain + LangGraph + Agents
+│     ├── Vector DBs + Chunking
+│     ├── LangChain + LangGraph
+│     └── RAGAS Evaluation
+│
+├── 08 · Deploy + CI/CD + Portfolio
+│     ├── Docker + GitHub Actions
+│     └── HuggingFace Spaces
+│
+└── 09 · System Design for AI *(optional)*
+      ├── Celery + Redis
+      └── Scaling + Caching
 
 ---
 
@@ -33,22 +57,22 @@ Deploy + CI/CD + Portfolio
 
 | Phase | Topic | Status |
 |-------|-------|--------|
-| 1 | Python Foundations + SQL | In Progress |
-| 2 | FastAPI + Security Basics | Upcoming |
-| 3 | Machine Learning + W&B Tracking | Upcoming |
-| 4 | NLP Fundamentals | Upcoming |
-| 5 | Transformers — Architecture | Upcoming |
-| 6 | LLMs + Prompt Engineering + Observability | Upcoming |
-| 7 | RAG + LangChain + LangGraph + Agents | Upcoming |
-| 8 | Deploy + CI/CD + Portfolio | Upcoming |
-| 9 | System Design for AI *(optional)* | Upcoming |
+| 1 | Python Foundations + SQL | ✅ Complete |
+| 2 | FastAPI + Security Basics | 🔄 In Progress |
+| 3 | Machine Learning + W&B Tracking | ⬜ Upcoming |
+| 4 | NLP Fundamentals | ⬜ Upcoming |
+| 5 | Transformers — Architecture | ⬜ Upcoming |
+| 6 | LLMs + Prompt Engineering + Observability | ⬜ Upcoming |
+| 7 | RAG + LangChain + LangGraph + Agents | ⬜ Upcoming |
+| 8 | Deploy + CI/CD + Portfolio | ⬜ Upcoming |
+| 9 | System Design for AI *(optional)* | ⬜ Upcoming |
 
 ---
 
-## PHASE BREAKDOWN:
+## Phase Breakdown
 
 ### Phase 1 — Python Foundations + SQL
-**Status: In Progress**
+**Status: ✅ Complete**
 
 - OOP: classes, `__init__`, `self`, inheritance, magic methods
 - Exceptions: `try/except/finally` — handle errors, not just print them
@@ -60,7 +84,10 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 2 — FastAPI + Security Basics
-**Status: Upcoming**
+**Status: 🔄 In Progress**
+
+> FastAPI chosen over Flask for its async support, automatic Swagger docs,
+> and native Pydantic integration — all critical for production AI backends.
 
 - Why FastAPI: async support, automatic docs, Pydantic validation
 - GET and POST endpoints returning JSON
@@ -74,7 +101,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 3 — Machine Learning + Experiment Tracking
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 > NumPy and Pandas are learned here in context — not as a separate phase
 
@@ -89,7 +116,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 4 — NLP Fundamentals
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 - Tokenization: LLMs read tokens, not words — inspect tokenizer output
 - Word embeddings: Word2Vec — a word as a list of numbers encoding meaning
@@ -101,9 +128,10 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 5 — Transformers: How They Actually Work
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
-> Dedicated phase added based on mentor recommendation — before LLMs, understand the architecture
+> Dedicated phase added based on mentor recommendation — before LLMs,
+> understand the architecture
 
 - Attention mechanism: every token attends to every other token simultaneously
 - Self-attention: queries, keys, values — what they are and why the math works
@@ -115,7 +143,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 6 — LLMs + Prompt Engineering + Observability
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 - Tokens, context window, temperature — know these cold
 - Zero-shot, few-shot, chain-of-thought prompting — implement and compare all three
@@ -130,7 +158,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 7 — RAG + LangChain + LangGraph + Agents
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 > Most employable AI engineering skill right now
 
@@ -148,7 +176,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 8 — Deploy + CI/CD + Portfolio
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 - Docker: write a Dockerfile for FastAPI — understand every line
 - Deploy to Render.com or Railway.app — free tier
@@ -161,7 +189,7 @@ Deploy + CI/CD + Portfolio
 ---
 
 ### Phase 9 — System Design for AI *(Optional)*
-**Status: Upcoming**
+**Status: ⬜ Upcoming**
 
 > Not required for first junior role. Separates junior from mid-level candidates.
 
@@ -170,26 +198,6 @@ Deploy + CI/CD + Portfolio
 - Caching strategies: what to cache, for how long, when to invalidate
 - Redis-based rate limiting at scale
 - Database design for AI apps: conversation history, embeddings, eval results
-
----
-
-## Tech Stack
-
-| Category | Tools |
-|----------|-------|
-| Language | Python |
-| Backend / API | FastAPI |
-| Auth & Security | JWT, python-jose, passlib, slowapi |
-| ML Framework | scikit-learn, PyTorch |
-| NLP / LLMs | HuggingFace Transformers, LangChain, LangGraph |
-| Experiment Tracking | Weights & Biases (W&B) |
-| Observability | LangSmith, Langfuse |
-| Vector DB | ChromaDB, FAISS |
-| Caching | Redis |
-| LLM APIs | Anthropic (Claude), OpenAI, Ollama (local) |
-| Evaluation | RAGAS |
-| Deployment | Docker, Render, Railway, GitHub Actions |
-| Portfolio | GitHub, HuggingFace Spaces, Kaggle |
 
 ---
 
