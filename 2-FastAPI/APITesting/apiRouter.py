@@ -19,5 +19,4 @@ app.add_middleware(
     allow_headers=["*"],      # Allow all headers
 )
 
-# Register issues router (all issue endpoints)
 app.include_router(issues_router)
