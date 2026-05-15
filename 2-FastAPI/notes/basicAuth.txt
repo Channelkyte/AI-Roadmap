@@ -1,5 +1,5 @@
 # ============================================================
-# BASIC AUTHENTICATION — FASTAPI
+#  BASIC AUTHENTICATION — FASTAPI
 # ============================================================
 #
 # This file explains how HTTP Basic Authentication works in FastAPI.
