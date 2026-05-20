@@ -1,165 +1,194 @@
+DATABASES
+
+1. Database
+    - stores structured data
+    - container for tables
+
+    Syntax:
+        CREATE DATABASE database_name;
+
+2. Table
+    - stores records
+    - rows = data
+    - columns = fields
+
+    Syntax:
+        CREATE TABLE table_name (...);
+
 # ============================================================
-# SQL MODULE NOTES - AI ENGINEERING
-# ============================================================
 
-# ------------------------------------------------------------
-# DATABASE CREATION
-# ------------------------------------------------------------
-# A database stores structured data
-
-# CREATE DATABASE issues_db;
-# USE issues_db;
-
-# CREATE TABLE issues (
-#     id INT PRIMARY KEY AUTO_INCREMENT,
-#     title VARCHAR(100),
-#     description TEXT,
-#     priority VARCHAR(20),
-#     status VARCHAR(20),
-#     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-# );
-
-# Key Idea:
-# - Database = container
-# - Table = structured data storage
-# - Rows = records
-# - Columns = fields
-
-# ------------------------------------------------------------
 # CRUD OPERATIONS
-# ------------------------------------------------------------
 
-# CREATE (Insert)
-# INSERT INTO issues (title, description, priority, status)
-# VALUES ('Bug Fix', 'Fix login error', 'high', 'open');
+1. CREATE
+    - inserts new records
 
-# READ
-# SELECT * FROM issues;
+    Syntax:
+        INSERT INTO table_name VALUES (...);
 
-# UPDATE
-# UPDATE issues SET status = 'closed' WHERE id = 1;
+2. READ
+    - retrieves records
 
-# DELETE
-# DELETE FROM issues WHERE id = 1;
+    Syntax:
+        SELECT * FROM table_name;
 
-# Key Idea:
-# CRUD = foundation of all backend systems
+3. UPDATE
+    - modifies existing records
 
-# ------------------------------------------------------------
-# FILTERING & SORTING
-# ------------------------------------------------------------
+    Syntax:
+        UPDATE table_name
+        SET column=value;
 
-# SELECT * FROM issues WHERE status = 'open';
+4. DELETE
+    - removes records
 
-# SELECT * FROM issues
-# WHERE priority = 'high' AND status = 'open';
-
-# SELECT * FROM issues ORDER BY created_at DESC;
-
-# SELECT * FROM issues
-# WHERE status = 'open'
-# ORDER BY priority DESC;
-
-# ------------------------------------------------------------
-# AGGREGATIONS
-# ------------------------------------------------------------
-
-# COUNT
-# SELECT COUNT(*) FROM issues;
-
-# AVG
-# SELECT AVG(priority_score) FROM issues;
-
-# MAX / MIN
-# SELECT MAX(id) FROM issues;
-# SELECT MIN(id) FROM issues;
-
-# GROUP BY
-# SELECT status, COUNT(*)
-# FROM issues
-# GROUP BY status;
-
-# HAVING
-# SELECT status, COUNT(*)
-# FROM issues
-# GROUP BY status
-# HAVING COUNT(*) > 1;
+    Syntax:
+        DELETE FROM table_name
+        WHERE condition;
 
 # Key Idea:
-# Aggregations are used for analytics and summaries
-
-# ------------------------------------------------------------
-# JOINS
-# ------------------------------------------------------------
-
-# INNER JOIN
-# SELECT users.name, issues.title
-# FROM users
-# INNER JOIN issues ON users.id = issues.user_id;
-
-# LEFT JOIN
-# SELECT users.name, issues.title
-# FROM users
-# LEFT JOIN issues ON users.id = issues.user_id;
-
-# RIGHT JOIN
-# SELECT users.name, issues.title
-# FROM users
-# RIGHT JOIN issues ON users.id = issues.user_id;
-
-# Key Idea:
-# Joins combine multiple tables
-
-# ------------------------------------------------------------
-# INDEXING
-# ------------------------------------------------------------
-
-# CREATE INDEX idx_status ON issues(status);
-
-# CREATE INDEX idx_status_priority ON issues(status, priority);
-
-# Key Idea:
-# Indexing improves query performance for large datasets
-
-# ------------------------------------------------------------
-# PYTHON + SQL INTEGRATION
-# ------------------------------------------------------------
-
-# import mysql.connector
-
-# conn = mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     password="password",
-#     database="issues_db"
-# )
-
-# cursor = conn.cursor()
-
-# cursor.execute("SELECT * FROM issues")
-# rows = cursor.fetchall()
-
-# INSERT
-# sql = "INSERT INTO issues (title, description, priority, status) VALUES (%s, %s, %s, %s)"
-# values = ("Bug Fix", "Fix API error", "high", "open")
-# cursor.execute(sql, values)
-# conn.commit()
-
-# UPDATE
-# cursor.execute("UPDATE issues SET status='closed' WHERE id=1")
-# conn.commit()
-
-# cursor.close()
-# conn.close()
-
-# ------------------------------------------------------------
-# SUMMARY
-# ------------------------------------------------------------
-
-# SQL = data layer
-# Python + SQL = backend + AI systems
-# Joins + Aggregations = data intelligence
-# Indexing = performance optimization
 # CRUD = backend foundation
 
 # ============================================================
+
+# FILTERING & SORTING
+
+1. WHERE
+    - filters records
+
+    Syntax:
+        SELECT * FROM table_name
+        WHERE condition;
+
+2. AND / OR
+    - multiple conditions
+
+    Syntax:
+        WHERE condition1 AND condition2;
+
+3. ORDER BY
+    - sorts results
+
+    Syntax:
+        ORDER BY column_name ASC/DESC;
+
+# ============================================================
+
+# AGGREGATIONS
+
+1. COUNT()
+    - counts records
+
+    Syntax:
+        SELECT COUNT(*) FROM table_name;
+
+2. AVG()
+    - calculates average
+
+    Syntax:
+        SELECT AVG(column_name)
+        FROM table_name;
+
+3. MAX() / MIN()
+    - highest or lowest value
+
+    Syntax:
+        SELECT MAX(column_name)
+        FROM table_name;
+
+4. GROUP BY
+    - groups records
+
+    Syntax:
+        GROUP BY column_name;
+
+5. HAVING
+    - filters grouped data
+
+    Syntax:
+        HAVING condition;
+
+# Key Idea:
+# Aggregations = analytics + reporting
+
+# ============================================================
+
+# JOINS
+
+1. INNER JOIN
+    - matching records only
+
+    Syntax:
+        INNER JOIN table2
+        ON table1.id = table2.id;
+
+2. LEFT JOIN
+    - all left table records
+
+    Syntax:
+        LEFT JOIN table2
+        ON table1.id = table2.id;
+
+3. RIGHT JOIN
+    - all right table records
+
+    Syntax:
+        RIGHT JOIN table2
+        ON table1.id = table2.id;
+
+# Key Idea:
+# Joins connect multiple tables
+
+# ============================================================
+
+# INDEXING
+
+1. Single Index
+    - improves query speed
+
+    Syntax:
+        CREATE INDEX index_name
+        ON table_name(column_name);
+
+2. Composite Index
+    - multiple columns
+
+    Syntax:
+        CREATE INDEX index_name
+        ON table_name(column1, column2);
+
+# Key Idea:
+# Indexing = performance optimization
+
+# ============================================================
+
+# PYTHON + SQL
+
+1. mysql.connector
+    - connects Python to MySQL
+
+    Syntax:
+        import mysql.connector
+
+2. Connection
+    - connects to database
+
+    Syntax:
+        mysql.connector.connect(...)
+
+3. Cursor
+    - executes SQL queries
+
+    Syntax:
+        cursor.execute(query)
+
+4. Commit
+    - saves changes
+
+    Syntax:
+        conn.commit()
+
+5. Fetch Data
+    - retrieves query results
+
+    Syntax:
+        cursor.fetchall()

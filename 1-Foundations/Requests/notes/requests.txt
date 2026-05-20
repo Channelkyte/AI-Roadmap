@@ -1,120 +1,163 @@
-# ============================================================
-# PYTHON REQUESTS MODULE - AI ENGINEERING NOTES
-# ============================================================
+REQUESTS 
 
-# ------------------------------------------------------------
 # GET REQUESTS
-# ------------------------------------------------------------
-# Used to retrieve data from an API
 
-# import requests
-# response = requests.get("https://api.example.com/data")
-# print(response.text)
+1. GET Request
+    - retrieves data from APIs
+    - most common API request
 
-# ------------------------------------------------------------
+    Syntax:
+        requests.get(url)
+
+# ============================================================
+
 # QUERY PARAMETERS
-# ------------------------------------------------------------
-# Used to send filters or extra data in URL
 
-# params = {"q": "AI", "limit": 10}
-# response = requests.get("https://api.example.com/search", params=params)
+1. Parameters
+    - sends extra data in URL
+    - used for filters and search
 
-# Example URL becomes:
-# https://api.example.com/search?q=AI&limit=10
+    Syntax:
+        params = {
+            "key": "value"
+        }
 
-# ------------------------------------------------------------
-# PARSING JSON
-# ------------------------------------------------------------
-# APIs usually return JSON data
+2. Common Uses
+    - search
+    - pagination
+    - filtering
 
-# data = response.json()
-# print(data["key"])
+# Key Idea:
+# Parameters customize API requests
+
+# ============================================================
+
+# JSON DATA
+
+1. JSON
+    - standard API response format
+    - converted into Python dictionaries
+
+    Syntax:
+        response.json()
+
+2. Accessing Data
+    - use dictionary keys
+
+    Syntax:
+        data["key"]
 
 # Key Idea:
 # JSON -> Python dictionary
 
-# ------------------------------------------------------------
+# ============================================================
+
 # STATUS CODES
-# ------------------------------------------------------------
-# Used to understand API response result
 
-# 200 -> success
-# 201 -> created
-# 400 -> bad request
-# 401 -> unauthorized
-# 403 -> forbidden
-# 404 -> not found
-# 500 -> server error
+1. 200
+    - successful request
 
-# Check status:
-# if response.status_code == 200:
-#     print("Success")
+2. 201
+    - resource created
 
-# ------------------------------------------------------------
-# POST REQUESTS
-# ------------------------------------------------------------
-# Used to send data to an API
+3. 400
+    - bad request
 
-# payload = {"name": "CJ", "role": "AI Engineer"}
-# response = requests.post("https://api.example.com/users", json=payload)
+4. 401
+    - unauthorized
 
-# ------------------------------------------------------------
-# ERROR HANDLING
-# ------------------------------------------------------------
-# Prevents crashes when API fails
+5. 403
+    - forbidden
 
-# try:
-#     response = requests.get(url, timeout=5)
-#     response.raise_for_status()
-# except requests.exceptions.Timeout:
-#     print("Request timed out")
-# except requests.exceptions.HTTPError:
-#     print("HTTP error occurred")
-# except requests.exceptions.RequestException:
-#     print("General request error")
+6. 404
+    - resource not found
+
+7. 500
+    - server error
 
 # Key Idea:
-# Always handle API failures in production systems
-
-# ------------------------------------------------------------
-# HEADERS AND AUTHENTICATION
-# ------------------------------------------------------------
-# Used for API security and metadata
-
-# headers = {
-#     "Authorization": "Bearer YOUR_API_KEY",
-#     "Content-Type": "application/json"
-# }
-
-# response = requests.get(url, headers=headers)
-
-# Key Idea:
-# Headers = identity + rules for API requests
-
-# ------------------------------------------------------------
-# ENV VARIABLES (.env)
-# ------------------------------------------------------------
-# Used to securely store API keys
-
-# from dotenv import load_dotenv
-# import os
-# load_dotenv()
-# api_key = os.getenv("API_KEY")
-
-# Key Idea:
-# Never hardcode secrets in code
-#
-# ------------------------------------------------------------
-# KEY TAKEAWAYS
-# ------------------------------------------------------------
-
-# - GET = fetch data
-# - POST = send data
-# - JSON = main API format
-# - Headers = authentication + metadata
-# - Status codes = response understanding
-# - Error handling = production stability
-# - Session = performance optimization
-# - dotenv = secure API key management
+# Status codes explain API responses
 
 # ============================================================
+
+# POST REQUESTS
+
+1. POST Request
+    - sends data to API
+    - used for creating resources
+
+    Syntax:
+        requests.post(url, json=data)
+
+2. Payload
+    - data sent to API
+
+    Syntax:
+        payload = {
+            "key": "value"
+        }
+
+# ============================================================
+
+# ERROR HANDLING
+
+1. try-except
+    - prevents crashes
+    - handles API failures
+
+    Syntax:
+        try:
+            pass
+        except:
+            pass
+
+2. Common Exceptions
+    - Timeout
+    - HTTPError
+    - RequestException
+
+# Key Idea:
+# Production systems must handle failures
+
+# ============================================================
+
+# HEADERS
+
+1. Headers
+    - metadata for requests
+    - authentication + configuration
+
+    Syntax:
+        headers = {
+            "Authorization": "Bearer TOKEN"
+        }
+
+2. Common Uses
+    - API authentication
+    - content type
+    - security
+
+# Key Idea:
+# Headers = request identity + rules
+
+# ============================================================
+
+# ENV VARIABLES (.env)
+
+1. dotenv
+    - stores secrets securely
+    - hides API keys
+
+    Syntax:
+        load_dotenv()
+
+2. getenv()
+    - retrieves environment variables
+
+    Syntax:
+        os.getenv("API_KEY")
+
+# Key Idea:
+# Never hardcode secrets
+
+

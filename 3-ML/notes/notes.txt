@@ -1,0 +1,14 @@
+TYPES OF MACHINE LEARNING:
+
+1. Supervised Learning:
+    - labeled datasets
+    - classification, regression
+    
+    Classification:
+        - Logistic regression
+        - Naive Bayes 
+        - KNN 
+        - Decision Tree 
+        - SVM 
+        - Random Forest 
+        
